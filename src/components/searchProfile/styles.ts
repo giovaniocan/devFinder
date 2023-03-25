@@ -20,14 +20,21 @@ export const SearchContainer = styled.form`
     font-size: 1.2rem;
   }
 
-  button {
-    color: ${(props) => props.theme.colors.importantText};
-    background: ${(props) => props.theme.colors.searchComponent};
-    padding: 0.8rem 1.3rem;
-    border: 0;
-    border-radius: 10px;
-  }
   svg {
     color: ${(props) => props.theme.colors.searchComponent};
   }
+`
+
+export const MagnifyingGlassButton = styled.button`
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+`
+export const SearchButton = styled.button`
+  color: ${(props) => props.theme.colors.importantText};
+  background: ${(props) => props.theme.colors.searchComponent};
+  padding: 0.8rem 1.3rem;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
 `

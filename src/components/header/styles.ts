@@ -10,7 +10,6 @@ export const HeaderContainer = styled.div`
 export const ThemeMode = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.75rem;
 
   h2 {
@@ -18,5 +17,11 @@ export const ThemeMode = styled.div`
     font-weight: 400;
     font-variant: small-caps; // deixar tudo em maiusculo
     letter-spacing: 4px; // espaçamento entre as letras
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
   }
 `

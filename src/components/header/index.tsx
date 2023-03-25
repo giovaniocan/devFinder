@@ -7,7 +7,9 @@ export function Header() {
       <h1>Devfinder</h1>
       <ThemeMode>
         <h2>dark</h2>
-        <Moon size={27} color="#fff" />
+        <button>
+          <Moon size={27} color="#fff" />
+        </button>
       </ThemeMode>
     </HeaderContainer>
   )
