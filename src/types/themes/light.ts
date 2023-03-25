@@ -1,10 +1,10 @@
 export default {
-  title: 'light',
+  title: 'dark',
 
   colors: {
-    background: '#1D1E26',
-    importantText: '#fff',
-    baseBackgroundComponent: '#5E35F2',
-    anotherText: '#C8D3DD',
+    background: '##C8D3DD',
+    importantText: '#1D1E26',
+    baseBackgroundComponent: '#fff',
+    anotherText: '#8C5CF2',
   },
 }
