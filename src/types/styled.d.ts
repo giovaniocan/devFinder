@@ -9,6 +9,8 @@ declare module 'styled-components' {
       importantText: string
       baseBackgroundComponent: string
       anotherText: string
+      searchComponent: string
+      textinput: string
     }
   }
 }

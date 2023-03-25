@@ -2,9 +2,11 @@ export default {
   title: 'light',
 
   colors: {
-    background: '#1D1E26',
+    background: '#011126',
     importantText: '#fff',
-    baseBackgroundComponent: '#5E35F2',
+    baseBackgroundComponent: '#011C40',
     anotherText: '#C8D3DD',
+    searchComponent: '#0d71ff',
+    textinput: '#A6A5A4',
   },
 }
