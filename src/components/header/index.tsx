@@ -1,14 +1,25 @@
 import { HeaderContainer, ThemeMode } from './styles'
-import { Moon } from 'phosphor-react'
+import { Moon, Sun } from 'phosphor-react'
+import { useContext } from 'react'
+import { ThemeContext } from 'styled-components'
 
-export function Header() {
+interface HeaderProps {
+  toggleTheme(): void
+}
+
+export function Header({ toggleTheme }: HeaderProps) {
+  const { title } = useContext(ThemeContext)
   return (
     <HeaderContainer>
       <h1>Devfinder</h1>
-      <ThemeMode>
-        <h2>dark</h2>
+      <ThemeMode onClick={toggleTheme}>
+        <h2>{title === 'dark' ? 'light' : 'dark'}</h2>
         <button>
-          <Moon size={27} color="#fff" />
+          {title === 'light' ? (
+            <Sun size={27} weight="fill" />
+          ) : (
+            <Moon size={27} color="#fff" weight="fill" />
+          )}
         </button>
       </ThemeMode>
     </HeaderContainer>
