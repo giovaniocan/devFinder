@@ -8,7 +8,7 @@ import {
   BottomInfo,
   EachBottomInfo,
 } from './styles'
-import { MapPin, Link, Buildings, TwitchLogo } from 'phosphor-react'
+import { MapPin, Link, Buildings, TwitterLogo } from 'phosphor-react'
 
 export function DevCard() {
   return (
@@ -39,19 +39,19 @@ export function DevCard() {
         </MiddleInfo>
         <BottomInfo>
           <EachBottomInfo>
-            <MapPin size={25} />
+            <MapPin size={15} color="#fff" weight="fill" />
             Brasil
           </EachBottomInfo>
           <EachBottomInfo>
-            <TwitchLogo size={25} />
+            <TwitterLogo size={15} color="#fff" weight="fill" />
             Not Available
           </EachBottomInfo>
           <EachBottomInfo>
-            <Link size={25} />
+            <Link size={15} color="#fff" weight="fill" />
             link do portifolio
           </EachBottomInfo>
           <EachBottomInfo>
-            <Buildings size={25} />
+            <Buildings size={15} color="#fff" weight="fill" />
             IFPR
           </EachBottomInfo>
         </BottomInfo>

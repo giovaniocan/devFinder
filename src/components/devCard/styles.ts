@@ -50,13 +50,24 @@ export const MiddleInfo = styled.div`
   background: ${(props) => props.theme.colors.background};
   border-radius: 12px;
   display: flex;
-  padding: 1.5rem ;
+  padding: 1rem 2rem;
   align-items: center;
-  justify-content: space-between;
+  gap: 9rem;
 `
 
-export const Each = styled.div``
+export const Each = styled.div`
+  font-size: 1.1rem;
+  color: ${(props) => props.theme.colors.textinput};
+`
 
-export const BottomInfo = styled.div``
+export const BottomInfo = styled.div`
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+`
 
-export const EachBottomInfo = styled.div``
+export const EachBottomInfo = styled.div`
+  display: flex;
+  gap: 0.5rem;
+`
