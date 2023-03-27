@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { Globalstyle } from '../src/styles/global'
+import { DevCard } from './components/devCard'
 import { Header } from './components/header'
 import { SearchProfile } from './components/searchProfile'
 import { AppContainer } from './homeStyled'
@@ -13,6 +14,7 @@ export function App() {
       <AppContainer>
         <Header />
         <SearchProfile />
+        <DevCard />
       </AppContainer>
     </ThemeProvider>
   )
