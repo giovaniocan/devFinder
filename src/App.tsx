@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider, DefaultTheme } from 'styled-components'
 import { Globalstyle } from '../src/styles/global'
 import { DevCard } from './components/devCard'
 import { Header } from './components/header'
@@ -7,9 +6,13 @@ import { SearchProfile } from './components/searchProfile'
 import { AppContainer } from './homeStyled'
 import dark from './types/themes/dark'
 import light from './types/themes/light'
+import { usePersistedState } from './utils/usePersistedState'
 
 export function App() {
-  const [theme, setTheme] = useState(dark)
+  const [theme, setTheme] = usePersistedState<DefaultTheme>(
+    'theme',
+    dark,
+  ) /** esse <DefaultTheme esta ai para adicionar tipagem> */
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light)
