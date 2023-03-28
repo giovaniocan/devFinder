@@ -15,10 +15,10 @@ export function Header({ toggleTheme }: HeaderProps) {
       <ThemeMode onClick={toggleTheme}>
         <h2>{title === 'dark' ? 'light' : 'dark'}</h2>
         <button>
-          {title === 'light' ? (
-            <Sun size={27} weight="fill" />
+          {title === 'dark' ? (
+            <Sun size={27} weight="fill" color="#fff" />
           ) : (
-            <Moon size={27} color="#fff" weight="fill" />
+            <Moon size={27} weight="fill" />
           )}
         </button>
       </ThemeMode>

@@ -14,6 +14,7 @@ export const SearchContainer = styled.form`
     width: 100%;
     background: transparent;
     border: 0;
+    color: ${(props) => props.theme.colors.importantText};
   }
   input::placeholder {
     color: ${(props) => props.theme.colors.textinput};

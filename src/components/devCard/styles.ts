@@ -8,7 +8,7 @@ export const DevCardContainer = styled.div`
   width: 100%;
   min-height: 400px;
   background: ${(props) => props.theme.colors.baseBackgroundComponent};
-  border-radius: 12px;
+  border-radius: 25px;
 
   padding: 3rem;
 

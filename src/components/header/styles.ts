@@ -23,5 +23,10 @@ export const ThemeMode = styled.div`
     background: transparent;
     border: 0;
     cursor: pointer;
+    outline: none;
+    &:focus {
+      outline: none;
+      border: 0;
+    }
   }
 `
