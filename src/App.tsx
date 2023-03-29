@@ -10,7 +10,7 @@ import dark from './types/themes/dark'
 import light from './types/themes/light'
 import { usePersistedState } from './utils/usePersistedState'
 
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css' // O estilo do Toastify
 
 export interface User {
@@ -59,13 +59,20 @@ export function App() {
       },
     )
     setUserData(response.data)
+    toast.error('User not found', {
+      className: 'toast',
+    })
   }
 
   return (
     <ThemeProvider theme={theme}>
       <Globalstyle />
       <AppContainer>
-        <ToastContainer autoClose={3000} />
+        <ToastContainer
+          autoClose={3000}
+          toastClassName="errorAlert"
+          theme="colored"
+        />
         <Header toggleTheme={toggleTheme} />
         <SearchProfile
           handleFindUser={handleFindUser}
