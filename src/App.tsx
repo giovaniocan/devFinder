@@ -48,20 +48,20 @@ export function App() {
   }
 
   async function handleFindUser() {
-    const response = await api.get<User>(`${username}`)
-    response.data.username = username
-    response.data.date = new Date(response.data.created_at).toLocaleDateString(
-      'en-Us',
-      {
+    try {
+      const response = await api.get<User>(`${username}`)
+      response.data.username = username
+      response.data.date = new Date(
+        response.data.created_at,
+      ).toLocaleDateString('en-Us', {
         day: '2-digit',
         month: 'short',
         year: 'numeric',
-      },
-    )
-    setUserData(response.data)
-    toast.error('User not found', {
-      className: 'toast',
-    })
+      })
+      setUserData(response.data)
+    } catch (error) {
+      toast.error('User not found')
+    }
   }
 
   return (
