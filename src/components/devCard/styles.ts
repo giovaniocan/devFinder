@@ -1,5 +1,17 @@
 import styled from 'styled-components'
 
+export const InitialContainer = styled.div`
+  margin-top: 2rem;
+  width: 100%;
+  min-height: 400px;
+  background: ${(props) => props.theme.colors.baseBackgroundComponent};
+  border-radius: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 export const DevCardContainer = styled.div`
   display: grid;
   grid-template-columns: 10rem auto;
