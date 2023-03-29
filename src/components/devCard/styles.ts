@@ -58,6 +58,10 @@ export const MiddleInfo = styled.div`
 export const Each = styled.div`
   font-size: 1.1rem;
   color: ${(props) => props.theme.colors.textinput};
+
+  h2 {
+    color: ${(props) => props.theme.colors.importantText};
+  }
 `
 
 export const BottomInfo = styled.div`
@@ -70,4 +74,8 @@ export const BottomInfo = styled.div`
 export const EachBottomInfo = styled.div`
   display: flex;
   gap: 0.5rem;
+`
+export const NotAvailable = styled.div`
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.textinput};
 `

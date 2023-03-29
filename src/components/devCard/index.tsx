@@ -7,6 +7,7 @@ import {
   Each,
   BottomInfo,
   EachBottomInfo,
+  NotAvailable,
 } from './styles'
 import { MapPin, Link, Buildings, TwitterLogo } from 'phosphor-react'
 import { User } from '../../App'
@@ -45,19 +46,35 @@ export function DevCard({ user }: Props) {
         <BottomInfo>
           <EachBottomInfo>
             <MapPin size={15} color="#fff" weight="fill" />
-            {user.location}
+            {user.location === null ? (
+              <NotAvailable>Not Available</NotAvailable>
+            ) : (
+              user.location
+            )}
           </EachBottomInfo>
           <EachBottomInfo>
             <TwitterLogo size={15} color="#fff" weight="fill" />
-            {user.twitter_username}
+            {user.twitter_username === null ? (
+              <NotAvailable>Not Available</NotAvailable>
+            ) : (
+              user.twitter_username
+            )}
           </EachBottomInfo>
           <EachBottomInfo>
             <Link size={15} color="#fff" weight="fill" />
-            {user.blog}
+            {user.blog === null ? (
+              <NotAvailable>Not Available</NotAvailable>
+            ) : (
+              user.blog
+            )}
           </EachBottomInfo>
           <EachBottomInfo>
             <Buildings size={15} color="#fff" weight="fill" />
-            {user.company}
+            {user.company === null ? (
+              <NotAvailable>Not Available</NotAvailable>
+            ) : (
+              user.company
+            )}
           </EachBottomInfo>
         </BottomInfo>
       </InfoContainer>
