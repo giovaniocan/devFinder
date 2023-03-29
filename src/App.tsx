@@ -10,6 +10,9 @@ import dark from './types/themes/dark'
 import light from './types/themes/light'
 import { usePersistedState } from './utils/usePersistedState'
 
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css' // O estilo do Toastify
+
 export interface User {
   name: string
   username: string
@@ -62,6 +65,7 @@ export function App() {
     <ThemeProvider theme={theme}>
       <Globalstyle />
       <AppContainer>
+        <ToastContainer autoClose={3000} />
         <Header toggleTheme={toggleTheme} />
         <SearchProfile
           handleFindUser={handleFindUser}
