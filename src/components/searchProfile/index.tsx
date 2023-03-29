@@ -1,32 +1,24 @@
 import { SearchContainer, MagnifyingGlassButton, SearchButton } from './styles'
 import { MagnifyingGlass } from 'phosphor-react'
-import { ChangeEvent, useState } from 'react'
 
-export function SearchProfile() {
-  const [search, setSearch] = useState('')
+interface Props {
+  handleFindUser: () => void
+  handleChangeUsername: (data: string) => void
+}
 
-  function handleNewSearch(event: ChangeEvent<HTMLInputElement>) {
-    event.target.setCustomValidity('')
-    setSearch(event.target.value)
-  }
-
-  function handleCreatSearch() {
-    event?.preventDefault()
-    console.log(search)
-    setSearch(' ')
-  }
+export function SearchProfile({ handleFindUser, handleChangeUsername }: Props) {
   return (
-    <SearchContainer onSubmit={handleCreatSearch}>
-      <MagnifyingGlassButton>
+    <SearchContainer>
+      <MagnifyingGlassButton onClick={handleFindUser}>
         <MagnifyingGlass size={40} color="#0d71ff" />
       </MagnifyingGlassButton>
 
       <input
         type="text"
         placeholder="Search GitHub Username"
-        onChange={handleNewSearch}
+        onChange={(data) => handleChangeUsername(data.currentTarget.value)}
       />
-      <SearchButton>Search</SearchButton>
+      <SearchButton onClick={handleFindUser}>Search</SearchButton>
     </SearchContainer>
   )
 }

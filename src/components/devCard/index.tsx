@@ -9,16 +9,21 @@ import {
   EachBottomInfo,
 } from './styles'
 import { MapPin, Link, Buildings, TwitterLogo } from 'phosphor-react'
+import { User } from '../../App'
 
-export function DevCard() {
+interface Props {
+  user: User
+}
+
+export function DevCard({ user }: Props) {
   return (
     <DevCardContainer>
-      <img src="https://github.com/giovaniocan.png" alt="" />
+      <img src={user.avatar_url} alt="" />
       <InfoContainer>
         <TopInfo>
           <HeaderInfo>
-            <h2>Giovani Apolinario Ocan</h2>
-            <span> Joined Oct 14, 2021</span>
+            <h2>{user.name}</h2>
+            <span> {user.created_at}</span>
           </HeaderInfo>
           <h5>@giovaniocan</h5>
           <span>bio da pessoa</span>
