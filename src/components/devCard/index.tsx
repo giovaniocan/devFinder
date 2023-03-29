@@ -24,7 +24,7 @@ export function DevCard({ user }: Props) {
         <TopInfo>
           <HeaderInfo>
             <h2>{user.name}</h2>
-            <span> {user.created_at}</span>
+            <span> Joined {user.date}</span>
           </HeaderInfo>
           <h5>@{user.username}</h5>
           <span>{user.bio}</span>

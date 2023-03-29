@@ -22,6 +22,7 @@ export interface User {
   location: string
   public_repos: number
   created_at: string
+  date?: string
   twitter_username: string
   blog: string
 }
@@ -46,6 +47,14 @@ export function App() {
   async function handleFindUser() {
     const response = await api.get<User>(`${username}`)
     response.data.username = username
+    response.data.date = new Date(response.data.created_at).toLocaleDateString(
+      'en-Us',
+      {
+        day: '2-digit',
+        month: 'short',
+        year: 'numeric',
+      },
+    )
     setUserData(response.data)
   }
 
