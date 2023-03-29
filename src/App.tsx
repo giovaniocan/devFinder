@@ -12,6 +12,7 @@ import { usePersistedState } from './utils/usePersistedState'
 
 export interface User {
   name: string
+  username: string
   avatar_url: string
   html_url: string
   bio: string
@@ -22,6 +23,7 @@ export interface User {
   public_repos: number
   created_at: string
   twitter_username: string
+  blog: string
 }
 
 export function App() {
@@ -43,6 +45,7 @@ export function App() {
 
   async function handleFindUser() {
     const response = await api.get<User>(`${username}`)
+    response.data.username = username
     setUserData(response.data)
   }
 

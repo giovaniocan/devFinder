@@ -25,39 +25,39 @@ export function DevCard({ user }: Props) {
             <h2>{user.name}</h2>
             <span> {user.created_at}</span>
           </HeaderInfo>
-          <h5>@giovaniocan</h5>
-          <span>bio da pessoa</span>
+          <h5>@{user.username}</h5>
+          <span>{user.bio}</span>
         </TopInfo>
         <MiddleInfo>
           <Each>
             Repos
-            <h2>9</h2>
+            <h2>{user.public_repos}</h2>
           </Each>
           <Each>
             Followers
-            <h2>0</h2>
+            <h2>{user.followers}</h2>
           </Each>
           <Each>
             Following
-            <h2>0</h2>
+            <h2>{user.following}</h2>
           </Each>
         </MiddleInfo>
         <BottomInfo>
           <EachBottomInfo>
             <MapPin size={15} color="#fff" weight="fill" />
-            Brasil
+            {user.location}
           </EachBottomInfo>
           <EachBottomInfo>
             <TwitterLogo size={15} color="#fff" weight="fill" />
-            Not Available
+            {user.twitter_username}
           </EachBottomInfo>
           <EachBottomInfo>
             <Link size={15} color="#fff" weight="fill" />
-            link do portifolio
+            {user.blog}
           </EachBottomInfo>
           <EachBottomInfo>
             <Buildings size={15} color="#fff" weight="fill" />
-            IFPR
+            {user.company}
           </EachBottomInfo>
         </BottomInfo>
       </InfoContainer>
