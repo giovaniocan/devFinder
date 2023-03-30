@@ -1,10 +1,17 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 960px;
+  width: 100%;
+
+  @media (max-width: 500px) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
 `
 
 export const ThemeMode = styled.div`

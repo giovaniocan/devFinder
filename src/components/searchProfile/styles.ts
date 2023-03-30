@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const SearchContainer = styled.div`
   margin-top: 3rem;
+  max-width: 960px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -18,11 +19,15 @@ export const SearchContainer = styled.div`
   }
   input::placeholder {
     color: ${(props) => props.theme.colors.textinput};
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   svg {
     color: ${(props) => props.theme.colors.searchComponent};
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 1rem;
   }
 `
 
@@ -38,4 +43,8 @@ export const SearchButton = styled.button`
   border: 0;
   border-radius: 10px;
   cursor: pointer;
+
+  @media (max-width: 500px) {
+    display: none;
+  }
 `

@@ -2,21 +2,24 @@ import styled from 'styled-components'
 
 export const InitialContainer = styled.div`
   margin-top: 2rem;
+  max-width: 960px;
   width: 100%;
   min-height: 400px;
   background: ${(props) => props.theme.colors.baseBackgroundComponent};
   border-radius: 25px;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 1rem;
 `
 
 export const DevCardContainer = styled.div`
-  display: grid;
-  grid-template-columns: 10rem auto;
-  grid-gap: 1rem;
+  display: flex;
+  gap: 2rem;
   margin-top: 2rem;
+  max-width: 960px;
   width: 100%;
   min-height: 400px;
   background: ${(props) => props.theme.colors.baseBackgroundComponent};
@@ -24,10 +27,21 @@ export const DevCardContainer = styled.div`
 
   padding: 3rem;
 
+  @media (max-width: 500px) {
+    padding: 1rem 2.5rem;
+    display: flex;
+  }
+
   img {
     border-radius: 50%;
     width: 9rem;
     height: 9rem;
+
+    @media (max-width: 500px) {
+      position: absolute;
+      width: 4rem;
+      height: 4rem;
+    }
   }
 `
 export const InfoContainer = styled.div`
@@ -35,6 +49,10 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 1.5rem;
+
+  @media (max-width: 500px) {
+    gap: 0.5rem;
+  }
 `
 
 export const TopInfo = styled.div`
@@ -43,19 +61,45 @@ export const TopInfo = styled.div`
   gap: 0.7rem;
 
   span {
+    max-width: 500px;
+    font-size: 1.1rem;
     color: ${(props) => props.theme.colors.textinput};
+
+    @media (max-width: 500px) {
+      font-size: 0.875rem;
+    }
   }
 
   h5 {
     color: ${(props) => props.theme.colors.searchComponent};
     font-size: 1rem;
     font-weight: 400;
+
+    @media (max-width: 500px) {
+      margin-top: 1rem;
+    }
   }
 `
 
 export const HeaderInfo = styled.div`
   display: flex;
   justify-content: space-between;
+
+  span {
+    color: ${(props) => props.theme.colors.textinput};
+
+    @media (max-width: 500px) {
+      display: none;
+    }
+  }
+  h2 {
+    font-size: 1.75rem;
+
+    @media (max-width: 500px) {
+      padding-left: 7rem;
+      font-size: 1.25rem;
+    }
+  }
 `
 
 export const MiddleInfo = styled.div`
@@ -65,6 +109,13 @@ export const MiddleInfo = styled.div`
   padding: 1rem 2rem;
   align-items: center;
   gap: 9rem;
+
+  @media (max-width: 500px) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    font-size: 1rem;
+  }
 `
 
 export const Each = styled.div`
@@ -74,6 +125,10 @@ export const Each = styled.div`
   h2 {
     color: ${(props) => props.theme.colors.importantText};
   }
+
+  @media (max-width: 500px) {
+    font-size: 0.875rem;
+  }
 `
 
 export const BottomInfo = styled.div`
@@ -81,12 +136,24 @@ export const BottomInfo = styled.div`
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+  @media (max-width: 500px) {
+    margin-top: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
 `
 
 export const EachBottomInfo = styled.div`
   display: flex;
   gap: 0.5rem;
+  font-weight: bold;
+
+  @media (max-width: 500px) {
+    font-size: 0.875rem;
+  }
 `
+
 export const NotAvailable = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.colors.textinput};
